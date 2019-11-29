@@ -1,0 +1,37 @@
+{
+  "defaultAssembly": "AutofacSample",
+  "components": [
+    {
+      "type": "AutofacSample.Addition",
+      "services": [
+        { "type": "AutofacSample.IOperation" },
+        { "type": "AutofacSample.IOtherOperation" }
+      ],
+      "autoActivate": true,
+      "injectProperties": true,
+      "instanceScope": "per-dependency",
+      "metadata": [
+        {
+          "key": "extraValue",
+          "value": 123,
+          "type": "System.Int32"
+        }
+      ],
+      "ownership": "external",
+      "parameters": {
+        "precision": 5
+      },
+      "properties": {
+        "ValueDictionary": {
+          "one": 1,
+          "two": 2
+        }
+      },
+      "someList": [1,2,3,4]
+    },
+    {
+      "type": "AutofacSample.Multiplication",
+      "services": [ { "type": "AutofacSample.IOperation" } ]
+    }
+  ]
+}
